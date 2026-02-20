@@ -1,0 +1,10 @@
+apache-airflow
+requests
+psycopg2-binary
+fastapi
+uvicorn
+pandas
+scikit-learn
+python-dotenv
+pydantic
+nltk

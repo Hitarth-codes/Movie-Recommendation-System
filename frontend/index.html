@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <h1>Movie Finder</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <span>✨</span> AI Mode
+            </button>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h3 class="hero-title">Recommendations based on what you love</h3>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <img src="assets/images/icon-search.svg" alt="Search Icon" class="search-icon">
+                    <input type="text" placeholder="Type a movie and explore recommendations..." class="search-input" autocomplete="off">
+                    <div class="search-results">
+            <!-- Search results will be populated here dynamically -->
+                    </div>
+                </div>
+                <button type="button" class="search-button" onclick="getRecommendations()">Search</button>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations">
+            <div class="carousel-container">
+                <button class="carousel-arrow prev-arrow">‹</button>
+                <div class="recommendations-carousel">
+                    <div class="recommendations-grid">
+                        
+                    </div>
+                </div>
+                <button class="carousel-arrow next-arrow">›</button>
+            </div>
+        </section>
+
+        <!-- Movie Details Popup -->
+        <div id="movie-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-button">&times;</span>
+                <div class="popup-grid">
+                    <div class="popup-poster">
+                        <img src="" alt="Movie Poster">
+                    </div>
+                    <div class="popup-details">
+                        <h2 class="popup-title"></h2>
+                        <div class="popup-meta">
+                            <span class="popup-rating"></span>
+                            <span class="popup-year"></span>
+                            <span class="popup-runtime"></span>
+                        </div>
+                        <div class="popup-tags"></div>
+                        <p class="popup-summary"></p>
+                        <div class="popup-credits">
+                            <p class="popup-director"></p>
+                            <p class="popup-actors"></p>
+                        </div>
+                        <a class="popup-trailer" href="#" target="_blank" rel="noopener noreferrer">
+                            ▶ Watch Trailer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

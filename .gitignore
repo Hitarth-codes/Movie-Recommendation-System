@@ -1,0 +1,33 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Secrets and Config
+.env
+config/airflow.cfg
+
+# Python bits
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and Models (Large Files)
+data/*.npy
+data/*.parquet
+models/*.pkl
+models/*.h5
+models/*.joblib
+
+# Airflow specific
+logs/
+plugins/  # Keep this if you have custom logic, ignore if empty or local-only
+
+# Frontend/Web
+.DS_Store
+node_modules/ # If you ever switch to npm
+
+# IDEs
+.vscode/
+.idea/
